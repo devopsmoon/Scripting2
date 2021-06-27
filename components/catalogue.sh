@@ -7,7 +7,7 @@ HEAD "Installing nodejs "
 yum install nodejs make gcc-c++ -y
 STAT $?
 HEAD "creating the user"
-if [ $? -eq  0  ]
+if [ $? -eq  0 ]
 then
   echo -e "\e[1;33mUser is already exists\e[0m"
   else
