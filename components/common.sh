@@ -11,4 +11,5 @@ STAT() {
           echo -e "\e[1;31mFail...\e[0m"
           echo -e "\e[1;33mCheck the logs for more details...\e[0m"
           exit 1
+          fi
 }
