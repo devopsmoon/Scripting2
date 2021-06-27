@@ -1,7 +1,7 @@
 #!/bin/bash
 source components/common.sh
 HEAD "Updating System"
-yum update -y && yum install epel-release -y && yum install update -y
+yum update -y && yum install epel-release -y && yum  update -y
 STAT $?
 HEAD "Installing mongodb server"
 echo '[mongodb-org-4.4]
