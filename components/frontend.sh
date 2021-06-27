@@ -6,9 +6,6 @@ STAT $?
 HEAD "Installing nginx server"
 yum install nginx -y
 STAT $?
-HEAD "Starting nginx service"
-systemctl start nginx && systemctl enable nginx
-STAT $?
 HEAD "Deleting the old HT DOCS"
 rm -rf /usr/share/nginx/html/*
 STAT $?
@@ -19,6 +16,6 @@ HEAD "Changing the directory"
 cd /usr/share/nginx/html/ && unzip /tmp/frontend.zip
 mv /usr/share/nginx/html/static/* /usr/share/nginx/html/ && rmdir static && mv /usr/share/nginx/html/localhost.conf /etc/nginx/nginx.conf
 STAT $?
-HEAD "Restarting the nginx server"
-systemctl restart nginx
+HEAD "Starting the nginx server"
+systemctl start nginx && systemctl enable nginx
 STAT $?
