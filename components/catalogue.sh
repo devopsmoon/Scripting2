@@ -26,7 +26,7 @@ sed -i 's/localhost/172.31.11.66/' /home/roboshop/catalogue/server.js
 sed -i 's/MONGO_ENDPOINT/172.31.11.66/' /home/roboshop/catalogue/systemd.service
 STAT $?
 HEAD "moving the systemd files to systems"
-mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+cd /home/roboshop/catalogue/ && mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 STAT $?
 HEAD "Starting the services"
 systemctl start catalogue && systemctl enable catalogue
